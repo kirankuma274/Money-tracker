@@ -5,7 +5,7 @@ const app=express()
 app.use(express.json()); // to parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // to parse form data
 app.use(cors())
-app.listen(4001,()=>{
+app.listen(PORT,()=>{
     console.log("server is running...")
 })
 
