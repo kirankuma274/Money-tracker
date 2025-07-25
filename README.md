@@ -6,7 +6,7 @@ A full-stack Money tracker  Built using **React**, **Node.js**, **Express**, **M
 
 ## 🌐 Live Demo
 
- **Click:**  [https://collect-feedback.netlify.app](https://money-trackery.netlify.app/) 
+ **Click:**  https://money-trackery.netlify.app/ 
  
  ---
 
