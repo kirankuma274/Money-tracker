@@ -6,6 +6,7 @@ function App() {
   let [description,setdescription]=useState('')
   let [price,setprice]=useState('')
   let [users,setusers]=useState([])
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
 
   useEffect(()=>{
     getusers().then((users)=>{
@@ -13,8 +14,9 @@ function App() {
     })
   },[users])
 
+    
   async function getusers(){
-   const url="http://127.0.0.1:4001/transaction"
+   const url=`${BASE_URL}/transaction`;
    let res= await fetch(url)
    let users=await res.json()
    return users
@@ -29,7 +31,7 @@ function App() {
    }
    else{
    e.preventDefault();
-     const url="http://127.0.0.1:4001/transaction"
+     const url=`${BASE_URL}/transaction`
      fetch(url,
       {method:'POST',
          headers:{'Content-type':'application/json'},
@@ -49,7 +51,7 @@ function App() {
 
 
   function handleDelete(id) {
-   const url = "http://127.0.0.1:4001/transaction"
+   const url = `${BASE_URL}/transaction`
  
    if(window.confirm('Are you sure you want to delete this transaction?')) {
       fetch(url,
