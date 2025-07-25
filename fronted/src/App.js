@@ -84,7 +84,7 @@ let balance=0
                    <input type='text' value={name} onChange={(e)=>{
                     let nametemp= e.target.value;
                     setname(nametemp) }}
-                    placeholder='+200 new samsung'/>
+                    placeholder='income or expenses'/>
 
                    <input type='datetime-local' value={datetime} onChange={(e)=>{
                     let datetemp= e.target.value;
